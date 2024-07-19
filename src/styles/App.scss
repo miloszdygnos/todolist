@@ -1,0 +1,85 @@
+@import "./variables.scss";
+
+.todoContainer {
+  width: 50%;
+  min-height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+    input {
+      border-radius: 10px;
+      height: 30px;
+      width: 200px;
+      padding: 0 5px;
+      border: none;
+      background-color: $darkColor;
+      color: white;
+    }
+    button {
+        padding: 5px 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        background-color: $darkColor;
+        color: white;
+        font-weight: 800;
+        border: none;
+        cursor: pointer;
+        transition: all .1s ease;
+        &:hover {
+          background-color: green;
+          color: $lightColor;
+        }
+    }
+  }
+  .todosContainer {
+    width: 100%;
+    height: 100%;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+    &__todo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:10px 20px;
+      background-color: $darkColor;
+      color: $lightColor;
+      cursor: pointer;
+      border-radius: 10px; 
+      &__active {
+      background-color: $accent;
+      
+    }
+    .todosContainer__todo--flexBox__title--completed{
+      text-decoration: line-through;
+      opacity: .4;
+    }
+      &__button {
+        margin-left: auto;
+        padding: 5px 10px;
+        margin-left: 5px;
+        border-radius: 5px;
+        background-color: $lightColor;
+        color: $darkColor;
+        font-weight: 800;
+        border: none;
+        cursor: pointer;
+        transition: all .1s ease;
+        &:hover {
+          background-color: red;
+          color: $lightColor;
+        }
+      }
+    }
+    
+  }
+}
